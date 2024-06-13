@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS & RDC Shoes Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #555;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .home-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .home-image {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .home-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #444;
+        }
+        .button-container {
+            padding-bottom: 80px; /* Adjust as needed to ensure the button is above the footer */
+        }
+
+        .shoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .shoe {
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: calc(33.333% - 40px); /* Adjust width to allow for gaps */
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .shoe:hover {
+            transform: scale(1.05);
+        }
+
+        .shoe img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .shoe h3, .shoe p {
+            margin: 10px 0;
+        }
+
+        .shoe button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .shoe button:hover {
+            background-color: #555;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5em;
+            color: #f00;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .heart-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMTcnO1jqhrRaXUnnQzuztFw5kXfO+i5Lk9Z+0A" crossorigin="anonymous" />
+</head>
+<body>
+
+<header>
+    <h1>CSS & RDC Shoes Center</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a> 
+    <a href="info.html">Personal Information</a> 
+    <a href="cart.html">Others</a>
+</nav>
+
+<section class="home-content">
+    <div class="home-image">
+        <img src="cover.jpg" alt="Welcome Image">
+    </div>
+</section>
+
+<section>
+    <h2>Our Shoes</h2>
+    <div class="shoes">
+        <div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="12.jpg" alt="Shoe 1">
+            <h3>361 Degrees XXKeleton | Blue Green</h3>
+            <p>3999.00</p>
+           <button onclick="addToCart('361 Degrees Big 3 | XXKeleton', 3999.00)">Add to Cart</button>
+        </div>
+        <div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="11.png" alt="Shoe 2">
+            <h3>361 Degrees Big 3 | California Sunset</h3>
+            <p>3999.00 </p>
+            <button onclick="addToCart('361 Degrees Big 3 | California Sunset', 3999.00)">Add to Cart</button>
+        </div>
+        <div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="123.jpeg" alt="Shoe 3">
+            <h3>361 Degrees Big 3 | Lightning Flint</h3>
+            <p>3999.00 </p>
+            <button onclick="addToCart('361 Degrees Big 3 | Lightning Flint', 3999.00)">Add to Cart</button>
+        </div>
+         <div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="samba.jpg" alt="Shoe 3">
+            <h3>Adidas Samba | White/Red</h3>
+            <p>1999.00 </p>
+            <button onclick="addToCart('Adidas Samba | White/Red', 1999.00)">Add to Cart</button>
+        </div>
+ <div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="samba2.jpg" alt="Shoe 3">
+            <h3>Adidas Samba | Black/White</h3>
+            <p>1999.00 </p>
+            <button onclick="addToCart('Adidas Samba | Black/White', 1999.00)">Add to Cart</button>
+        </div>
+<div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="vc.jpg" alt="Shoe 3">
+            <h3>Precision 6 | Black Bolt</h3>
+            <p>2799.00 </p>
+            <button onclick="addToCart('Precision 6 | Black Bolt', 1999.00)">Add to Cart</button>
+        </div>
+<div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="as.jpg" alt="Shoe 3">
+            <h3>Kyrie IV | Cyan Blue</h3>
+            <p>1999.00 </p>
+            <button onclick="addToCart('Kyrie IV| Black/Cyan Blue', 1999.00)">Add to Cart</button>
+        </div>
+<div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="bv.jpg" alt="Shoe 3">
+            <h3>Kyrie VII | Mother Nature</h3>
+            <p>2199.00 </p>
+            <button onclick="addToCart('Kyrie VII | Mother Nature', 1999.00)">Add to Cart</button>
+        </div>
+<div class="shoe">
+            <i class="fas fa-heart heart-icon"></i>
+            <img src="bst.jpg" alt="Shoe 3">
+            <h3>Bapesta | White/Black</h3>
+            <p>2500.00 </p>
+            <button onclick="addToCart('Bapesta | White/Black', 1999.00)">Add to Cart</button>
+        </div>
+        <!-- Add more shoes as needed -->
+    </div>
+</section>
+
+
+
+<script>
+    function addToCart(shoeName, price) {
+        alert(shoeName + " has been added to your cart!");
+
+        // Retrieve the cart from localStorage or initialize it if it doesn't exist
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Add the new item to the cart
+        cart.push({ name: shoeName, price: price });
+
+        // Save the updated cart to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+</script>
+
+</body>
+</html>
